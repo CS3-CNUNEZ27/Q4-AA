@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Neuroethics Website</title>
+	</head>
+	<body onload="checkCookie()">
+	<nav>
+        <div id="navAnim">
+            <ul>
+                <img class="logo" src="Logo.png">
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="ResInst.html">Research & Institutions</a></li>
+                <li><a href="References.html">References</a></li>
+            </ul>
+        </div>
+    </nav>
+	<div class="news">
+		<p class="newsAnim">- Latest News: -</p>
+	</div>
+	<p class="smolTitle">As of 05/24/24</p><br>
+	<div class="bgOfBg">
+		<div class="newsRow1">
+			<div class="topic1">
+				<img src="Researchers.jpg">
+				<h1>- Researchers Overrate Their Ethical Practices -</h1>
+				<p>
+					A new study identifies significant overestimation among 
+					researchers regarding their adherence to good research practice 
+					compared to their peers. Surveying over 11,000 Swedish researchers,
+					the study uncovers a widespread belief in one's own ethical superiority,
+					not just individually but also across entire research fields.
+				</p>
+				<button class="redirectButton" onclick="redirect1()">READ MORE OUTSIDE</button>
+			</div>
+			<div class="topic2">
+				<img src="Neuralink.jpg">
+				<h1>- Neuralink’s Brain Chip Implant Marks New Era in Human-Computer Synergy -</h1>
+				<p>
+					Elon Musk announces the first human has been successfully implanted
+					with Neuralink's brain chip, named Telepathy, aiming to allow severe physically
+					disabled individuals to control devices via thought. The FDA-approved trial
+					focuses on the implant's potential for movement control, with the patient
+					reportedly recovering well and showing promising initial results.
+				</p>
+				<button class="redirectButton" onclick="redirect2()">READ MORE OUTSIDE</button>
+			</div>
+		</div>
+		<div class="newsRow2">
+			<div class="topic3">
+				<img src="AI Memorize.jpg">
+				<h1>- AI Chatbots “Memorize” Copyrighted Poems, Raising Ethical Concerns -</h1>
+				<p>
+					AI chatbots, like ChatGPT, are capable of memorizing and reproducing poems, 
+					even if they are copyrighted. The research highlights ethical concerns about 
+					how AI models are trained, potentially using data scraped from the internet, 
+					including copyrighted material.
+				</p>
+				<button class="redirectButton" onclick="redirect4()">READ MORE OUTSIDE</button>
+			</div>
+			<div class="topic4">
+				<img src="Brain Tissue.jpg">
+				<h1>- Tiny Human Brain Tissue Organoids Can’t Be Legally Considered “a Person” -</h1>
+				<p>
+					Researchers proposed the need for a legal framework to guide the conversation
+					on whether or not human brain organoids can be considered people. Brain organoids
+					are grown from stem cells in a lab, mimicking the growth and structure of real
+					brains.
+				</p>
+				<button class="redirectButton" onclick="redirect4()">READ MORE OUTSIDE</button>
+			</div>
+		</div>
+	</div>
+	<p style="color: white; padding-top: 20px; padding-bottom: 20px;">Note: All buttons link to websites from other sources, the links can be found in the reference section</p>
+	</body>
+	<script>
+		function redirect1(){
+			window.location.href = "https://neurosciencenews.com/research-ethics-25667/";
+		}
+		function redirect2(){
+			window.location.href = "https://neurosciencenews.com/neuralink-bci-neuroethics-255555/";
+		}
+		function redirect3(){
+			window.location.href = "https://neurosciencenews.com/ai-chatbot-poetry-ethics-25442/";
+		}
+		function redirect4(){
+			window.location.href = "https://neurosciencenews.com/personhood-organoids-neuroethics-23196/.html";
+		}
+		function checkCookie() {
+            var user = localStorage.getItem("username");
+            if (user){
+            }
+			else{
+				window.location.href = "index.html";
+			}
+        }
+        function getCookie(varKey) {
+            localStorage.getItem(varKey);
+        }
+	</script>
+	<style>
+		.smolTitle{
+			color: white;
+			font-family: Copperplate, Papyrus, fantasy;
+			text-shadow: 4px 4px #11223d;
+		}
+		.redirectButton:hover{
+			transform: scale(104%);
+		}
+		.redirectButton{
+			padding: 8px;
+			border-radius: 20px;
+			font-size: 15px;
+			margin-left: 38px;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+		.newsRow1, .newsRow2{
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			animation: fadeInSlideUp 0.5s ease forwards;
+			padding-top: 20px;
+		}
+		
+		.newsRow1 img,.newsRow2 img{
+			width: 100%;
+			height: auto;
+			border-radius: 40px 40px 0px 0px;
+		}
+		.topic1 h1, .topic3 h1, .topic4 h1{
+			padding: 20px 40px 10px 40px;
+			font-family: Arial;
+		}
+		.topic2 h1{
+			padding: 20px 40px 10px 40px;
+			font-family: Arial;
+			font-size: 30px;
+		}
+		.topic1 p, .topic2 p, .topic3 p, .topic4 p{
+			font-size: 24px;
+			padding: 0px 40px 15px 40px;
+			font-family: Arial;
+		}
+		.topic1, .topic2, .topic3, .topic4{
+			width: 500px;
+			height: 750px;
+			margin-top: 10px;
+			transition: 0.3s;
+			font-size: 15px;
+			border-radius: 40px;
+			background-color: #00000070;
+			color: white;
+			margin-bottom: 50px;
+		}
+		.topic1,.topic3{
+			margin-right: 60px;
+		}
+		
+		.topic1:hover,.topic2:hover,.topic3:hover,.topic4:hover{
+			transform: scale(102%);
+		}
+		.newsAnim{
+			animation: fadeInSlideUp 0.2s ease forwards;
+		}
+		.bgOfBg{
+			background-color: #09122180;
+			border-radius: 60px;
+			width: 1150px;
+			height: 1650px;;
+		}
+		.news{
+			margin-top: 30px;
+			font-size: 60px;	
+			color: white;
+			border-radius: 20px;
+			font-family: Copperplate, Papyrus, fantasy;
+			text-shadow: 4px 4px #11223d;
+			transition: 0.3s;
+			border-radius: 20px;
+		}
+		.news:hover{
+			transform: scale(108%);
+		}
+		.intro{
+			width: 800px;
+			font-size: 20px;
+			margin-bottom: 15px;
+			margin-top: 25px;
+			color: white;
+			background-color:#00000070;
+			padding: 15px 20px 25px 20px;
+			border-radius: 20px;
+			font-family: Arial;
+		}
+		
+		
+	
+		.logo:hover{
+			transform: scale(102%);
+		}
+		.logo{
+			width: 300px;
+			float:left;
+			padding-left: 10px;
+			transition: 0.3s;
+		}
+		
+		
+		
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+		@keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		body{
+			background-image: url("Home-BG.jpg");
+			Background-repeat: no-repeat;
+			background-size: cover; 
+			height: 100vh;  
+			overflow-x: hidden;  
+			display: flex;
+			flex-direction: column; 
+			align-items: center;
+			background-attachment: fixed;
+		}
+		*{	
+			padding: 0;		
+			margin:0;
+		}
+		
+		
+		
+		#navAnim{
+			animation: slideInFromLeft 0.7s ease forwards;
+		}
+		nav{
+			width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			left: 0;
+			z-index: 1030;
+			background-image: linear-gradient(#020b1a, #00000030);
+			padding-bottom: 1px;
+			padding-top: 5px;
+			line-height: 2;
+		}	
+		
+		nav ul li{
+			display: inline;
+			padding-left: 30px;
+			padding-right: 25px;
+			font-family: Arial;
+			list-style-type: none;
+			font-size: 17px;
+			color: white;
+			text-align: center;
+		}
+		
+		a{
+			color: white;
+			text-decoration: none;
+			transition: transform 1s;
+		}
+		
+		a:hover{
+			color: #9cc7ff;
+		}
+		
+		
+		
+	</style>
+</html>	

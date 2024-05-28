@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Neuroethics Website</title>
+	</head>
+	<body onload="checkCookie()">
+	<nav>
+        <div id="navAnim">
+            <ul>
+                <img class="logo" src="Logo.png">
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="ResInst.html">Research & Institutions</a></li>
+                <li><a href="References.html">References</a></li>
+            </ul>
+        </div>
+    </nav>
+	<p class="defineTitle">- What is Neuroethics? -</p>
+	<div class="define">
+		<p class="defineInfo">
+			The study of the moral, legal, and societal implications of neuroscience is known as 
+			neuroethics. It tackles the important issues and problems brought up by our growing 
+			understandin and capacity for controlling the brain. Neuroethics seeks to address 
+			the important ethical questions that arise from our increasing ability to influence ideas,
+			actions, and emotions as a result of advancements in neuroscience
+		</p>
+		<img class="defineImg" src="whatNeuro.jpg">
+    </div>
+	<p class="scopeTitle">- Scope of Neuroethics -</p>
+	<div class="scope">
+		<p class="scopeInfo">
+			The scope of neuroethics covers a wide range of topics where ethics and neuroscience collide. 
+			Some of the important areas are:</p>
+		<div class="scopeList">
+			<ul>
+				<li><p>
+					Cognitive Enhancement: The ethical considerations of using drugs or technologies
+					to enhance cognitive functions in healthy individuals.</p></li><br>
+				<li><p>
+					Brain Privacy: Protecting the privacy of individuals' thoughts and mental states
+					in an era of advanced brain imaging technologies.</p></li><br>
+				<li><p>
+					Neuroimaging and Mental Health: The implications of using neuroimaging for 
+					diagnosing and treating mental health disorders.</p></li><br>
+				<li><p>
+					Neuromarketing: Ethical concerns related to using neuroscience to influence consumer
+					behavior.</p></li><br>
+				<li><p>
+					Neurotechnology and Human Rights: Ensuring that advancements in neurotechnology do not
+					infringe on human rights.
+				</p></li>
+			</ul>
+		</div>
+	</div>
+	<p class="historyTitle">- History -</p>
+	<div class="history">
+		<div class="historyInfo">
+			<p>
+				Neuroethics dates back all the way to the ancient philosophers like
+				Plato and Aristotle. Who looked into the relationship between the mind and the body. 
+				Later on, scientific and ethical reflections on the brain were shaped by these early 
+				findings.
+			</p><br>
+			<p>
+				In the 19th century, Paul Broca and Carl Wernicke made amazing advancements in neuroscience. 
+				They linked brain regions to language which established the role of the brain in cognition. 
+				Neurology emerged as a separate field, which lead to early 20th-century technologies 
+				such as EEG, MRI, and PET scans which facilitated thorough examination of the functions of the brain, leading
+				to better understanding of the brain.
+			</p><br>
+			<p>
+				Neuroethics gained official recognition in 2002 during a pivotal Dana Foundation 
+				conference in San Francisco where leading figures came together to deliberate about
+				the ethical, legal as well as social undertones of neurosciences. Thus, the term 
+				"neuroethics" was used to denote both the study of neuroscience (ethical issues that
+				stem from neuroscience research or its applications) and neurobiology in relation to
+				ethics (neural bases for morals and ethical behavior).
+			</p>
+		</div>
+		<div class="historyImg">
+			<img class="hImg1" src="history1.jpg">
+			<img class="hImg2" src="history2.jpg">
+		</div>
+	</div>
+	<p class="significanceTitle">- Significance Today -</p>
+    <div class="significance">
+		<p class="significanceInfo">
+			Neuroethics is important today because it helps us navigate the ethical challenges 
+			arising from advances in neuroscience. It guides us in making ethical decisions
+			about brain-related technologies, treatments, and research, ensuring that scientific 
+			progress is accompanied by responsible and thoughtful consideration of moral implications.
+		</p>
+	</div>	
+	</body>
+	<script>		
+		function checkCookie() {
+            var user = localStorage.getItem("username");
+            if (user){
+            }
+			else{
+				window.location.href = "index.html";
+			}
+        }
+        function getCookie(varKey) {
+            localStorage.getItem(varKey);
+        }
+	</script>
+	<style>
+		.significance:hover{
+			transform: scale(101%);
+		}
+		.significance{
+			padding-bottom: 80px;
+			transition: 0.3s;
+		}
+		.significanceTitle:hover{
+			transform: scale(104%);
+		}
+		.significanceTitle{
+			margin-bottom: 25px;
+			font-size: 60px;	
+			color: white;
+			border-radius: 20px;
+			font-family: Copperplate, Papyrus, fantasy;
+			text-shadow: 4px 4px #11223d;
+			transition: 0.3s;
+			border-radius: 20px;
+			text-align: center;
+			transition: 0.3s;
+		}
+		.significanceInfo{
+			width: 970px;
+			font-size: 20px;
+			color: white;
+			background-color:#00000070;
+			padding: 25px 35px 25px 35px;
+			border-radius: 30px;
+			font-family: Arial;
+		}
+		.history{
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			padding-bottom: 40px;
+		}
+		
+		.historyTitle:hover{
+			transform: scale(104%);
+		}
+		.historyTitle{
+			margin-top: 30px;
+			font-size: 60px;	
+			color: white;
+			border-radius: 20px;
+			font-family: Copperplate, Papyrus, fantasy;
+			text-shadow: 4px 4px #11223d;
+			transition: 0.3s;
+			border-radius: 20px;
+			text-align: center;
+			margin-bottom: 25px;
+			transition: 0.3s;
+		}
+		.historyInfo:hover{
+			transform: scale(101%);
+		}
+		.historyInfo{
+			width: 400px;
+			font-size: 20px;
+			color: white;
+			background-color:#00000070;
+			padding: 25px 35px 25px 35px;
+			border-radius: 30px;
+			font-family: Arial;
+			transition: 0.3s;
+		}
+		.hImg1:hover{
+			transform: scale(101%);
+		}
+		.hImg1{
+			border-radius: 30px;
+			width: 560px;
+			transition: 0.3s;
+		}
+		.hImg2:hover{
+			transform: scale(101%);
+		}
+		.hImg2{
+			width: 560px;
+			border-radius: 30px;
+			transition: 0.3s;
+		}
+		.historyImg{
+			width: 560px;
+		}
+		.define:hover{
+			transform: scale(101%);
+		}
+		.define{
+			text-align: center;
+			transition: 0.3s;
+		}
+		.defineTitle:hover{
+			transform: scale(104%);
+		}
+		.defineTitle{
+			margin-top: 45px;
+			font-size: 60px;	
+			color: white;
+			border-radius: 20px;
+			font-family: Copperplate, Papyrus, fantasy;
+			text-shadow: 4px 4px #11223d;
+			transition: 0.3s;
+			border-radius: 20px;
+		}
+		.defineInfo{
+			width: 1000px;
+			font-size: 20px;
+			margin-top: 25px;
+			color: white;
+			background-color:#00000070;
+			padding: 25px 50px 25px 50px;
+			border-radius: 40px 40px 0px 0px;
+			font-family: Arial;
+			animation: fadeInSlideUp 0.5s ease forwards;
+		}
+		.defineImg{
+			border-radius: 0px 0px 40px 40px;
+			margin-bottom: 40px;
+			transition: 0.3s;
+			width: 1100px;
+			height: 400px;
+			animation: fadeInSlideUp 0.5s ease forwards;
+		}
+		.scope:hover{
+			transform: scale(101%);
+		}
+		.scope{
+			transition: 0.3s;
+		}
+		.scopeInfo{
+			width: 900px;
+			font-size: 20px;
+			text-align: center;
+			color: white;
+			background-color:#00000099;
+			padding: 15px 90px 15px 90px;
+			border-radius: 40px 40px 0px 0px;
+			font-family: Arial;
+			animation: fadeInSlideUp 0.5s ease forwards;
+			text-align: center;
+		}
+		.scopeList{
+			width: 900px;
+			font-size: 20px;
+			margin-bottom: 10px;
+			color: white;
+			background-color: #09122180;
+			padding: 20px 90px 30px 90px;
+			border-radius: 0px 0px 40px 40px;
+			font-family: Arial;
+			animation: fadeInSlideUp 0.5s ease forwards;
+		}
+		.scopeTitle:hover{
+			transform: scale(104%);
+		}
+		.scopeTitle{
+			margin-bottom: 25px;
+			transition: 0.3s;
+			font-size: 60px;	
+			color: white;
+			border-radius: 20px;
+			font-family: Copperplate, Papyrus, fantasy;
+			text-shadow: 4px 4px #11223d;
+			transition: 0.3s;
+			border-radius: 20px;
+			text-align: center;
+		}
+		
+		.logo:hover{
+			transform: scale(102%);
+		}
+		.logo{
+			width: 300px;
+			float:left;
+			padding-left: 10px;
+			transition: 0.3s;
+		}
+		
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+		
+		@keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		body{
+			background-image: url("Home-BG.jpg");
+			Background-repeat: no-repeat;
+			background-size: cover; 
+			height: 100vh;  
+			overflow-x: hidden;  
+			display: flex;
+			flex-direction: column; 
+			align-items: center;
+			background-attachment: fixed;
+		}
+		
+		*{	
+			padding: 0;		
+			margin:0;
+		}
+		#navAnim{
+			animation: slideInFromLeft 0.7s ease forwards;
+		}
+		nav{
+			width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			left: 0;
+			z-index: 1030;
+			background-image: linear-gradient(black, #00000025);
+			padding-bottom: 1px;
+			padding-top: 5px;
+			line-height: 2;
+		}	
+		
+		nav ul li{
+			display: inline;
+			padding-left: 30px;
+			padding-right: 25px;
+			font-family: Arial;
+			list-style-type: none;
+			font-size: 17px;
+			color: white;
+			text-align: center;
+		}
+		
+		a{
+			color: white;
+			text-decoration: none;
+			transition: transform 1s;
+		}
+		
+		a:hover{
+			color: #9cc7ff;
+		}
+		
+		
+		
+	</style>
+</html>	

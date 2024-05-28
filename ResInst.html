@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Neuroethics Website</title>
+	</head>
+	<body onload="checkCookie()">
+	<nav>
+        <div id="navAnim">
+            <ul>
+                <img class="logo" src="Logo.png">
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="ResInst.html">Research & Institutions</a></li>
+                <li><a href="References.html">References</a></li>
+            </ul>
+        </div>
+    </nav>
+	<div class="RRP_TitleAnim">
+		<p class="RRP_Title">- Recent Research Projects -</p>
+	</div>
+	<div class="RRP">
+		<div class="RPs">
+			<img class="RPImage" src="BCI.jpg">
+			<h1>Ethical Implications of Brain-Computer Interfaces</h1>
+			<p>
+			Investigating the ethical concerns surrounding the development and use of BCIs, 
+			particularly regarding privacy, consent, and the potential for mind manipulation.
+			</p>
+		</div>
+		<div class="RPs">
+			<img class="RPImage" src="AI.jpg">
+			<h1>Ethics of Artificial Intelligence in Neuroscience</h1>
+			<p>
+			Exploring the ethical issues related to the integration of AI in neuroscience 
+			research and clinical applications, including decision-making processes and the 
+			potential biases in AI algorithms.
+			</p>
+		</div>
+		<div class="RPs">
+			<img class="RPImage" src="Neurogenetics.jpg">
+			<h1>Ethical Use of Neurogenetics</h1>
+			<p>
+			Examining the ethical issues related to the use of genetic information in 
+			neuroscience, including implications for identity, privacy, and the potential
+			for genetic enhancement.
+			</p>
+		</div>
+		<div class="RPs">
+			<img class="RPImage" src="DBS.jpg">
+			<h1>Neuroethics of Deep Brain Stimulation (DBS)</h1>
+			<p>
+			Studying the long-term effects and ethical implications of using DBS for 
+			treating neurological and psychiatric conditions, such as Parkinson's disease 
+			and depression.
+			</p>
+		</div>
+	</div>
+	<div class="RI_TitleAnim">
+		<p class="RI_Title">- Institutions -</p>
+	</div>
+	<div class="RI">
+		<div class="imageContain">
+			<img class="RI_Image" src="Inst1.jpg"><br>
+			<img class="RI_Image" src="Inst2.jpg"><br>
+			<img class="RI_Image" src="Inst3.jpg"><br>
+			<img class="RI_Image" src="Inst4.jpg"><br>
+			<img class="RI_Image" src="Inst5.jpg"><br>
+			<img class="RI_Image" src="Inst6.jpg"><br>
+			<img class="RI_Image" src="Inst7.jpg"><br>
+		</div>
+		<div>
+			<div class="RI_Info">
+				<h1>The Center for Neurotechnology</h1><br>
+				<p>
+					It is an Engineering Research Center, supported by the National
+					Science Foundation, focused on developing devices to restore 
+					sensory and motor functions. The center operates out of the 
+					University of Washington.
+				</p>
+			</div>
+			<div class="RI_Info">
+				<h1>The Oxford Uehiro Centre for Practical Ethics</h1><br>
+				<p>
+					A center for bioethics, including neuroethics, by conducting advanced
+					research, providing comprehensive education programs, and developing
+					impactful policy guidelines.			
+				</p>
+			</div>
+			<div class="RI_Info">
+				<h1>The National Core for Neuroethics</h1><br>
+				<p>
+					A reserach institute for ethical, legal, and social implications of neuroscience
+					research and technologies. It aims to advance interdisciplinary research,
+					foster public engagement, and inform policy development.		
+				</p>
+			</div>
+			<div class="RI_Info">
+				<h1>The Center for Neuroscience Society</h1><br>
+				<p>
+					Ethical, legal, and social implications of neuroscience, with research, educational
+					programs, and public outreach.			
+				</p>
+			</div>
+			<div class="RI_Info">
+				<h1 style="font-size: 31px;">Neuroethics Research Unit at the Institut de recherches cliniques de Montréal.</h1><br>
+				<p>
+					A research unit that focuses on Ethical, social, and legal aspects of neuroscience. It aims to understand the 
+					implications of brain research and neurotechnologies on society.	
+				</p>
+			</div>
+			<div class="RI_Info">
+				<h1>The Dana Foundation</h1><br>
+				<p>
+					Funds brain science research and public education, including neuroethics. They support
+					both scientific research and public awareness of ethical issues in neuroscience.		
+				</p>
+			</div>
+			<div class="RI_Info">
+				<h1>The Hastings Center</h1><br>
+				<p>
+					 Focuses on Bioethics research and public policy, including neuroethics, to inform ethical 
+					 decision-making in science and medicine.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+	<script>
+		function checkCookie() {
+            var user = localStorage.getItem("username");
+            if (user){
+            }
+			else{
+				window.location.href = "index.html";
+			}
+        }
+        function getCookie(varKey) {
+            localStorage.getItem(varKey);
+        }
+		function redirect1(){
+			window.location.href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654969/";
+		}
+		function redirect2(){
+			window.location.href = "https://news.ncsu.edu/2019/05/neuroenhancement-ethics-challenges/";
+		}
+		function redirect3(){
+			window.location.href = "https://brain.ieee.org/publications/ieee-brain-talks/qa-with-dr-joseph-j-fins-md-macp-frp-weill-cornell-medical-college-yale-law-school/";
+		}
+		function redirect4(){
+			window.location.href = "https://www.neuroethicssociety.org/interview-hannah-maslen-2018";
+		}
+		function redirect5(){
+			window.location.href = "https://www.neuroethicssociety.org/books";
+		}
+		function redirect6(){
+			window.location.href = "https://link.springer.com/journal/12152/articles";
+		}
+	</script>
+	<style>
+		.RI_Info:hover{
+			transform: scale(102%);
+		}
+		.RI_Info{
+			width: 600px;
+			height: 220px;
+			background-color:#00000070;
+			padding: 25px 35px 25px 35px;
+			border-radius: 30px;
+			font-family: Arial;
+			transition: 0.3s;
+			margin-bottom: 20px;
+		}
+		.RI_Info h1{
+			font-size: 35px;
+		}
+		.RI_Info p{
+			font-size: 25px;
+		}
+		.RI_Image:hover{
+			transform: scale(102%);
+		}
+		.RI_Image{
+			width: 500px;
+			height: 270px;
+			border-radius: 30px;
+			margin-bottom: 15px;
+			transition: 0.3s;
+		}
+		.imageContain{
+			margin-top: 2px;
+		}
+		.RI{
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			padding-bottom: 40px;
+			font-size: 20px;
+			color: white;
+		}
+		.RPs:hover{
+			transform: scale(102%);
+		}
+		.RPs{
+			width: 300px;
+			height: 650px;
+			margin-top: 10px;
+			transition: 0.3s;
+			font-size: 15px;
+			border-radius: 30px;
+			background-color: #00000070;
+			color: white;
+			margin-bottom: 50px;
+			transition: 0.3s;
+		}
+		.RPImage{
+			width: 300px;
+			height: 200px;
+			border-radius: 30px 30px 0px 0px;
+		}
+		.RPs h1{
+			font-size: 25px;
+			padding: 15px 20px 0px 20px;
+			font-family: Arial;
+		}
+		.RPs p{
+			font-size: 25px;
+			padding: 10px 20px 0px 20px;
+			font-family: Arial;
+		}
+		
+		.RRP{
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			animation: fadeInSlideUp 0.5s ease forwards;
+			padding-top: 20px;
+		}
+		.RI_TitleAnim:hover, .RRP_TitleAnim:hover{
+			transform: scale(104%);
+		}
+		.RI_TitleAnim, .RRP_TitleAnim{
+			transition: 0.3s;
+		}
+		.RRP_Title, .RI_Title {
+			margin-top: 35px;
+			margin-bottom: 25px;
+			font-size: 60px;	
+			color: white;
+			border-radius: 20px;
+			font-family: Copperplate, Papyrus, fantasy;
+			text-shadow: 4px 4px #11223d;
+			transition: 0.3s;
+			border-radius: 20px;
+			text-align: center;
+			transition: 0.3s;
+			animation: fadeInSlideUp 0.5s ease forwards;
+		}
+		.logo:hover{
+			transform: scale(102%);
+		}
+		.logo{
+			width: 300px;
+			float:left;
+			padding-left: 10px;
+			transition: 0.3s;
+		}
+		
+		
+		
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+		@keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		
+		body{
+			background-image: url("Home-BG.jpg");
+			Background-repeat: no-repeat;
+			background-size: cover; 
+			height: 100vh;  
+			overflow-x: hidden;  
+			display: flex;
+			flex-direction: column; 
+			align-items: center;
+			background-attachment: fixed;
+		}
+		*{	
+			padding: 0;		
+			margin:0;
+		}
+		
+		
+		
+		#navAnim{
+			animation: slideInFromLeft 0.7s ease forwards;
+		}
+		nav{
+			width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			left: 0;
+			z-index: 1030;
+			background-image: linear-gradient(black, #00000025);
+			padding-bottom: 1px;
+			padding-top: 5px;
+			line-height: 2;
+		}	
+		
+		nav ul li{
+			display: inline;
+			padding-left: 30px;
+			padding-right: 25px;
+			font-family: Arial;
+			list-style-type: none;
+			font-size: 17px;
+			color: white;
+			text-align: center;
+		}
+		
+		a{
+			color: white;
+			text-decoration: none;
+			transition: transform 1s;
+		}
+		
+		a:hover{
+			color: #9cc7ff;
+		}
+		
+		
+		
+	</style>
+</html>	

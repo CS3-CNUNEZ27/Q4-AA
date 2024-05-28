@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Neuroethics Website</title>
+	</head>
+	<body onload="checkCookie()">
+	<nav>
+        <div id="navAnim">
+            <ul>
+                <img class="logo" src="Logo.png">
+                <li><a onclick="errorMessage()">Home</a></li>
+                <li><a onclick="errorMessage()">About</a></li>
+                <li><a onclick="errorMessage()">News</a></li>
+                <li><a onclick="errorMessage()">Research & Institutions</a></li>
+                <li><a onclick="errorMessage()">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+	<div class="welcome">
+		<p id="welcomeAnim" >PLEASE CREATE AN ACCOUNT!</p>
+	</div>
+	<div class="welcome2">
+		<p>To continue viewing this website, please create an account.</p>
+	</div>
+	
+    <div class="signUpPrompts">
+        <form onsubmit="return accountStuff(event)" onreset="returnToZero()">
+            <label for="username1">USERNAME:</label><br>
+            <input placeholder="Username" id="username1" maxlength="18" class="inputBox" type="text" size="50" name="username" onblur="redAlert(this)" onfocus="lockIn(this)" required><br>
+            <label for="pass1">PASSWORD:</label><br>
+            <input placeholder="Password" id="pass1" maxlength="18" class="inputBox" type="password" size="50" name="password" onblur="redAlert(this)" onchange="changer()" required><br>
+            <label for="passconfirm1">CONFIRM PASSWORD:</label><br>
+            <input placeholder="Confirm Password" id="passconfirm1" maxlength="18" class="inputBox" type="password" size="50" name="passconfirm" onblur="redAlert(this)" onchange="changer()" required><br>
+            <label for="email1">EMAIL:</label><br>
+            <input placeholder="Email" id="email1" class="inputBox" type="email" name="email" size="50" onblur="redAlert(this)" onfocus="lockIn(this)" required><br>
+            <input type="submit" value="Submit" id="button1">
+            <input type="reset" value="Reset" id="button1">
+        </form>
+        <p class="passFail" id="failedPass"></p>
+    </div>
+	</body>
+	<script>
+		function errorMessage() {
+            alert("Please Create an Account to be able to access the main website");
+        }
+        function checkCookie() {
+            var user = localStorage.getItem("username");
+            if (user) {
+                window.location.href = "HomePage.html";
+            }
+        }
+
+        function getCookie(varKey) {
+            localStorage.getItem(varKey);
+        }
+
+        function setCookie(varValue) {
+            localStorage.setItem("username", varValue);
+        }
+
+        function changer() {
+            var x = document.getElementById("pass1").value;
+            var y = document.getElementById("passconfirm1").value;
+            if (y !== x || y === "" || x === "") {
+                document.getElementById("failedPass").innerHTML = "* Password should be the same!";
+                document.getElementById("passconfirm1").style.border = "2px solid red";
+                document.getElementById("passconfirm1").style.backgroundColor = "#f5dfe3";
+                document.getElementById("pass1").style.border = "2px solid red";
+                document.getElementById("pass1").style.backgroundColor = "#f5dfe3";
+            } else {
+                document.getElementById("failedPass").innerHTML = "";
+                document.getElementById("passconfirm1").style.border = "2px solid green";
+                document.getElementById("passconfirm1").style.backgroundColor = "#d6ffe1";
+                document.getElementById("pass1").style.border = "2px solid green";
+                document.getElementById("pass1").style.backgroundColor = "#d6ffe1";
+            }
+        }
+
+        function redAlert(missingValue) {
+            if (missingValue.value === "") {
+                missingValue.style.border = "2px solid red";
+                missingValue.style.backgroundColor = "#f5dfe3";
+            } else {
+                if (missingValue.id !== "pass1" && missingValue.id !== "passconfirm1") {
+                    missingValue.style.border = "2px solid green";
+                    missingValue.style.backgroundColor = "#d6ffe1";
+                }
+            }
+        }
+
+        function lockIn(wereIn) {
+            wereIn.style.border = "2px solid black";
+            wereIn.style.backgroundColor = "white";
+        }
+
+        function accountStuff() {
+            var a = document.getElementById("pass1").value;
+            var b = document.getElementById("passconfirm1").value;
+            if (a !== b) {
+                document.getElementById("failedPass").innerHTML = "* Passwords do not match!";
+                return false;
+            } else {
+                var uName = document.getElementById("username1").value;
+                setCookie(uName); 
+                return true;
+            }
+        }
+
+        function returnToZero() {
+            document.getElementById("passconfirm1").style.border = "2px solid black";
+            document.getElementById("passconfirm1").style.backgroundColor = "white";
+            document.getElementById("pass1").style.border = "2px solid black";
+            document.getElementById("pass1").style.backgroundColor = "white";
+            document.getElementById("username1").style.border = "2px solid black";
+            document.getElementById("username1").style.backgroundColor = "white";
+            document.getElementById("email1").style.border = "2px solid black";
+            document.getElementById("email1").style.backgroundColor = "white";
+            document.getElementById("failedPass").innerHTML = "";
+        }
+	</script>
+	<style>
+		#button1:hover{
+			transform: scale(105%);
+			background-color: #ffffff;
+		}
+		#button1{
+			margin-top:10px;
+			margin-bottom: 15px;
+			border-radius: 20px;
+			padding: 5px 10px 5px 10px;
+			font-size: 20px;
+			transition: 0.3s;
+		}
+		#failedPass{
+			color: #ff6b6b;
+		}
+		.inputBox{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding-left: 10px;
+			font-size: 25px;
+		}
+		.logo:hover{
+			transform: scale(102%);
+		}
+		.logo{
+			width: 300px;
+			float:left;
+			padding-left: 10px;
+			transition: 0.3s;
+		}
+		.signUpPrompts{
+			margin-top: 20px;
+			background-color: #00000080;
+			letter-spacing: 2px;
+			padding: 25px 50px 25px 50px;
+			border-radius: 15px;
+			font-size: 20px;
+			font-family: Arial;
+			color: white;
+			animation: fadeInSlideUp 1s ease forwards;
+		}
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+		
+		@keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		
+		#welcomeAnim{
+			animation: fadeInSlideUp 0.5s ease forwards;
+		}
+		.welcome:hover{
+			transform: scale(102%);
+		}
+		.welcome{
+			transition: 0.3s;
+			margin-top:70px;
+			font-family: Copperplate, Papyrus, fantasy;
+			font-size: 70px;
+			text-shadow: 4px 4px #11223d;
+			color: white;
+		}
+		.welcome2{
+			margin-top: 10px;
+			color: white;
+			padding: 8px;
+			font-size: 20px;
+			border-radius: 10px;
+			font-family: 'Courier New', monospace;
+			font-weight: bold;
+			text-shadow: 4px 4px #11223d;
+			animation: fadeInSlideUp 0.7s ease forwards;
+		}
+		
+		body{
+			background-image: url("Sign-Up BG.jpg");
+			Background-repeat: no-repeat;
+			background-size: cover; 
+			height: 100vh;  
+			overflow-x: hidden;  
+			display: flex;
+			flex-direction: column; 
+			align-items: center;
+		}
+		
+		*{	
+			padding: 0;		
+			margin:0;
+		}
+		#navAnim{
+			animation: slideInFromLeft 0.7s ease forwards;
+		}
+		nav{
+			width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			left: 0;
+			z-index: 1030;
+			background-image: linear-gradient(black, #00000025);
+			padding-bottom: 1px;
+			padding-top: 5px;
+			line-height: 2;
+		}	
+		
+		nav ul li{
+			display: inline;
+			padding-left: 30px;
+			padding-right: 25px;
+			font-family: Arial;
+			list-style-type: none;
+			font-size: 17px;
+			color: white;
+			text-align: center;
+		}
+		
+		a{
+			color: white;
+			text-decoration: none;
+			transition: transform 1s;
+		}
+		
+		a:hover{
+			color: #9cc7ff;
+		}
+		
+		
+		
+	</style>
+</html>	

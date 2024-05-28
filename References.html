@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Neuroethics Website</title>
+	</head>
+	<body onload="checkCookie()">
+	<nav>
+        <div id="navAnim">
+            <ul>
+                <img class="logo" src="Logo.png">
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="ResInst.html">Research & Institutions</a></li>
+                <li><a href="References.html">References</a></li>
+            </ul>
+        </div>
+    </nav>
+	<div class="RTitleAnim">
+		<p class="RTitle">- References -</p>
+	</div>
+	<div class="linkAnim">
+		<p class="link">
+		Davidoff, E. J. (2020b). Agency and Accountability: Ethical Considerations for Brain-Computer interfaces. The Rutgers journal of bioethics. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654969/ 
+		</p>
+		<p class="link">
+		Shipman, M. (2019, May 8). The ethics and challenges surrounding neuroenhancement. NC State News. https://news.ncsu.edu/2019/05/neuroenhancement-ethics-challenges/ 
+		</p>
+		<p class="link">
+		Q&A with dr. Joseph J. Fins, Neuroethics Perspectives from a doctor. IEEE Brain. (n.d.). https://brain.ieee.org/publications/ieee-brain-talks/qa-with-dr-joseph-j-fins-md-macp-frp-weill-cornell-medical-college-yale-law-school/ 
+		</p>
+		<p class="link">
+		Interview Hannah Maslen 2018. International Neuroethics Society. (n.d.). https://www.neuroethicssociety.org/interview-hannah-maslen-2018 
+		</p>
+		<p class="link">
+		Beets, R. (n.d.). Books. International Neuroethics Society. https://www.neuroethicssociety.org/books 
+		</p>
+		<p class="link">
+		Conway, J. M., Masotti, J., Conway, P., Høeg, M. L., Frankish, K., Letheby, C., Nina Yichen WeiRebekah J. ChoiAnna Wexler, Wei, N. Y., Choi, R. J., Wexler, A., Vries, B. de, Klein, A. B. S., Beck, A., Schönau, A., Klein, E., Stahl, P. O. E. C., Ochang, P., Eke, D., Stahl, B. C., … Chomanski, B. (n.d.). Neuroethics. SpringerLink. https://link.springer.com/journal/12152/articles 
+		</p>
+		<p class="link">
+		Roskies, A. (2021, March 3). Neuroethics. Stanford Encyclopedia of Philosophy. https://plato.stanford.edu/entries/neuroethics/ 
+		</p>
+		<p class="link">
+		Illes, J., & Bird, S. J. (2006, September). Neuroethics: A modern context for ethics in neuroscience. Trends in neurosciences. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1656950/ 
+		</p>
+		<p class="link">
+		The history, not so short, of neuroethics. (n.d.). https://www.researchgate.net/publication/370872596_The_history_not_so_short_of_neuroethics 
+		</p>
+		<p class="link">
+		Neuroscience News. (2024, February 26). Researchers overrate their ethical practices. https://neurosciencenews.com/research-ethics-25667/ 
+		</p>
+		<p class="link">
+		Neuroscience News. (2024a, February 4). Neuralink’s brain chip implant marks New Era in human-computer synergy. https://neurosciencenews.com/neuralink-bci-neuroethics-255555/ 
+		</p>
+		<p class="link">
+		Neuroscience News. (2024a, January 10). Ai Chatbots “memorize” copyrighted poems, raising ethical concerns. https://neurosciencenews.com/ai-chatbot-poetry-ethics-25442/ 
+		</p>
+		<p class="link">
+		FeaturedNeurologyNeuroscience, FeaturedNeurosciencePsychology, & FeaturedNeuroscience. (2023, May 18). Neuroscience News Science Magazine - Research Articles - Psychology Neurology Brains ai. Neuroscience News. https://neurosciencenews.com/personhood-organoids-neuroethics-23196/.html 
+		</p>
+		<p class="link">
+		Sun, X., & Ye, B. (2023, November 27). The functional differentiation of brain–computer interfaces (BCIS) and its ethical implications. Nature News. https://www.nature.com/articles/s41599-023-02419-x 
+		</p>
+		<p class="link">
+		Author links open overlay panelStuart McLennan, & AbstractThe intersection of neuroscience and artificial intelligence (AI) promises important advances. (2024, March 1). What the embedded ethics approach brings to AI-Enhanced Neuroscience. Developments in Neuroethics and Bioethics. https://www.sciencedirect.com/science/article/pii/S2589295924000158
+		</p>
+		<p class="link">
+		JS;, U. W. (n.d.). Ethical issues in Neurogenetics. Handbook of clinical neurology. https://pubmed.ncbi.nlm.nih.gov/29325614/ 
+		</p>
+		<p class="link">
+		J;, C. (n.d.). Ethical brain stimulation - neuroethics of deep brain stimulation in research and clinical practice. The European journal of neuroscience. https://pubmed.ncbi.nlm.nih.gov/21039955/
+		</p>
+		<p class="link">
+		Center for neurotechnology. (n.d.). https://centerforneurotech.uw.edu/research/neuroethics 
+		</p>
+	</div>
+	</body>
+	<script>
+		function checkCookie() {
+            var user = localStorage.getItem("username");
+            if (user){
+            }
+			else{
+				window.location.href = "index.html";
+			}
+        }
+        function getCookie(varKey) {
+            localStorage.getItem(varKey);
+        }
+	</script>
+	<style>
+		.link:hover{
+			transform: scale(102%);
+		}
+		.linkAnim{
+			animation: fadeInSlideUp 0.7s ease forwards;
+		}
+		.link{
+			width: 900px;
+			background-color:#00000070;
+			padding: 25px;
+			border-radius: 30px;
+			font-family: Arial;
+			transition: 0.3s;
+			margin-bottom: 20px;
+			color: white;
+			
+		}
+		.RTitle{
+			margin-top: 35px;
+			margin-bottom: 25px;
+			font-size: 60px;	
+			color: white;
+			border-radius: 20px;
+			font-family: Copperplate, Papyrus, fantasy;
+			text-shadow: 4px 4px #11223d;
+			transition: 0.3s;
+			border-radius: 20px;
+			text-align: center;
+			animation: fadeInSlideUp 0.5s ease forwards;
+		}
+		.RTitleAnim:hover{
+			transform: scale(104%);
+		}
+		.RTitleAnim{
+			transition: 0.3s;
+		}
+		
+		
+	
+		.logo:hover{
+			transform: scale(102%);
+		}
+		.logo{
+			width: 300px;
+			float:left;
+			padding-left: 10px;
+			transition: 0.3s;
+		}
+		
+		
+		
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+		@keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		body{
+			background-image: url("Home-BG.jpg");
+			Background-repeat: no-repeat;
+			background-size: cover; 
+			height: 100vh;  
+			overflow-x: hidden;  
+			display: flex;
+			flex-direction: column; 
+			align-items: center;
+			background-attachment: fixed;
+		}
+		*{	
+			padding: 0;		
+			margin:0;
+		}
+		
+		
+		
+		#navAnim{
+			animation: slideInFromLeft 0.7s ease forwards;
+		}
+		nav{
+			width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			left: 0;
+			z-index: 1030;
+			background-image: linear-gradient(#020b1a, #00000030);
+			padding-bottom: 1px;
+			padding-top: 5px;
+			line-height: 2;
+		}	
+		
+		nav ul li{
+			display: inline;
+			padding-left: 30px;
+			padding-right: 25px;
+			font-family: Arial;
+			list-style-type: none;
+			font-size: 17px;
+			color: white;
+			text-align: center;
+		}
+		
+		a{
+			color: white;
+			text-decoration: none;
+			transition: transform 1s;
+		}
+		
+		a:hover{
+			color: #9cc7ff;
+		}
+		
+		
+		
+	</style>
+</html>	
