@@ -3,8 +3,8 @@
 	<head>
 	<title>Neuroethics Website</title>
 	</head>
-	<body onload="checkCookie()">
-	<nav>
+	<body onload="checkCookie()">  <!-- Checks if you already have a cookie -->
+	<nav> <!-- Navigation Bar -->
         <div id="navAnim">
             <ul>
                 <img class="logo" src="Logo.png">
@@ -40,10 +40,10 @@
     </div>
 	</body>
 	<script>
-		function errorMessage() {
+	function errorMessage() { //stops user from opening the other pages if they dont have an account
             alert("Please Create an Account to be able to access the main website");
         }
-        function checkCookie() {
+        function checkCookie() { //checks for cookie
             var user = localStorage.getItem("username");
             if (user) {
                 window.location.href = "HomePage.html";
@@ -54,11 +54,11 @@
             localStorage.getItem(varKey);
         }
 
-        function setCookie(varValue) {
+        function setCookie(varValue) { //sets cookie after clicking submit
             localStorage.setItem("username", varValue);
         }
 
-        function changer() {
+        function changer() { //changes input boxes visually
             var x = document.getElementById("pass1").value;
             var y = document.getElementById("passconfirm1").value;
             if (y !== x || y === "" || x === "") {
@@ -76,7 +76,7 @@
             }
         }
 
-        function redAlert(missingValue) {
+        function redAlert(missingValue) { //visually change for input box, makes it red when the passwords arent the same 
             if (missingValue.value === "") {
                 missingValue.style.border = "2px solid red";
                 missingValue.style.backgroundColor = "#f5dfe3";
@@ -88,12 +88,12 @@
             }
         }
 
-        function lockIn(wereIn) {
+        function lockIn(wereIn) {  //makes the input border and background to black and white when focused
             wereIn.style.border = "2px solid black";
             wereIn.style.backgroundColor = "white";
         }
 
-        function accountStuff() {
+        function accountStuff() { //if password and password confirm isnt the dame, then it wont work. If they are then the cookie is set and you are sent to the homepage
             var a = document.getElementById("pass1").value;
             var b = document.getElementById("passconfirm1").value;
             if (a !== b) {
@@ -106,7 +106,7 @@
             }
         }
 
-        function returnToZero() {
+        function returnToZero() { //resets the whole form
             document.getElementById("passconfirm1").style.border = "2px solid black";
             document.getElementById("passconfirm1").style.backgroundColor = "white";
             document.getElementById("pass1").style.border = "2px solid black";
